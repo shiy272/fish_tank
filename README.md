@@ -5,6 +5,7 @@
 ---
 将HA 架设在云服务器上，可以随时访问。在配合docker部署MQTT，运行视频转发服务，  
 让HA可以接受并控制鱼缸监测设备
+![微信截图_20250623122549](https://github.com/user-attachments/assets/5ec05211-deed-4f38-9820-3eefbdeb413a)
 ### **核心亮点**
 
 1. **多传感器融合监测**
@@ -14,6 +15,7 @@
     * 环境参数：DHT11温湿度传感器
     * 实时视频：ESP32-CAM鱼眼摄像头
 2. **智能喂食系统**
+
 
     ```c++
     void triggerFeeding() {
