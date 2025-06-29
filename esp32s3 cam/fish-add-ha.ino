@@ -37,8 +37,8 @@
 #define SERVO_DURATION 10000  // 舵机运行时间（毫秒）
 
 // ========== WiFi配置 ==========
-const char* ssid = "Xiaomi_F94A";     // WiFi名称
-const char* password = "sy20122012";  // WiFi密码
+const char* ssid = "1111";     // WiFi名称
+const char* password = "1111";  // WiFi密码
 // ========== 时间服务器配置 ==========
 const char* NTP_SERVER_PRIMARY = "cn.pool.ntp.org";
 const char* NTP_SERVER_BACKUP = "ntp.aliyun.com";
@@ -57,10 +57,10 @@ bool persistentConnection = false;      // 连接状态标志
 unsigned long lastConnectionCheck = 0;  // 上次连接检查时间
 
 // ============== MQTT配置 ==============
-const char* mqtt_server = "47.120.69.173";
+const char* mqtt_server = "1111";
 const int mqtt_port = 8883;  // TLS端口
-const char* mqtt_user = "esp32";
-const char* mqtt_password = "39891120Liyu";
+const char* mqtt_user = "1111";
+const char* mqtt_password = "1111";
 // 设备唯一标识
 const char* device_id = "fish_tank_monitor_01";
 // TLS证书 (替换为你的CA证书)
@@ -757,8 +757,8 @@ void sendSensorData() {
 // 巴法云MQTT配置
 const char* bemfa_server = "bemfa.com";
 const int bemfa_port = 9501;
-const char* bemfa_uid = "d69d90a3ad5349449ddab3a6c734599a";  // 开发者密钥
-const char* bemfa_topic = "home004";
+const char* bemfa_uid = "1111";  // 开发者密钥
+const char* bemfa_topic = "fish004";
 
 unsigned long bemfaReconnectTime = 0;
 const unsigned long BEMFA_RETRY_INTERVAL = 5000;
