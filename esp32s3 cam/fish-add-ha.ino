@@ -37,8 +37,8 @@
 #define SERVO_DURATION 10000  // 舵机运行时间（毫秒）
 
 // ========== WiFi配置 ==========
-const char* ssid = "1111";     // WiFi名称
-const char* password = "1111";  // WiFi密码
+const char* ssid = "111";     // WiFi名称
+const char* password = "111";  // WiFi密码
 // ========== 时间服务器配置 ==========
 const char* NTP_SERVER_PRIMARY = "cn.pool.ntp.org";
 const char* NTP_SERVER_BACKUP = "ntp.aliyun.com";
@@ -48,19 +48,23 @@ const char* NTP_SERVER_BACKUP = "ntp.aliyun.com";
 bool isStreaming = false;
 unsigned long lastFrameSent = 0;
 const int STREAM_INTERVAL = 200;  // 5 FPS (200ms)
-const char* streamServer = "47.120.69.173";
+const char* streamServer = "111.111.111.111"; //服务器地址
 const int streamPort = 5002;
 WiFiClient streamClient;
 
 WiFiClient persistentStreamClient;      // 持久化连接对象
 bool persistentConnection = false;      // 连接状态标志
 unsigned long lastConnectionCheck = 0;  // 上次连接检查时间
-
+// ============== 巴法云MQTT配置 ============== 
+const char* bemfa_server = "bemfa.com"; //连接巴法云
+const int bemfa_port = 9501;
+const char* bemfa_uid = "111";  // 开发者密钥
+const char* bemfa_topic = "home004";
 // ============== MQTT配置 ==============
-const char* mqtt_server = "1111";
+const char* mqtt_server = "111.111.111.111";
 const int mqtt_port = 8883;  // TLS端口
-const char* mqtt_user = "1111";
-const char* mqtt_password = "1111";
+const char* mqtt_user = "111";   //MQTT用户名
+const char* mqtt_password = "111";//MQTT密码
 // 设备唯一标识
 const char* device_id = "fish_tank_monitor_01";
 // TLS证书 (替换为你的CA证书)
@@ -754,11 +758,7 @@ void sendSensorData() {
                      isStreaming ? "ON" : "OFF", true);
   resetWatchdog();
 }
-// 巴法云MQTT配置
-const char* bemfa_server = "bemfa.com";
-const int bemfa_port = 9501;
-const char* bemfa_uid = "1111";  // 开发者密钥
-const char* bemfa_topic = "fish004";
+
 
 unsigned long bemfaReconnectTime = 0;
 const unsigned long BEMFA_RETRY_INTERVAL = 5000;
